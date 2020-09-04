@@ -15,10 +15,20 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: SvgPicture.asset("assets/images/3.svg"),
+          body: IconButton(
+            icon:    Icon(
+                Icons.search,
+              ),
+            color: Colors.grey[900],
+            iconSize: 100.0,
+            onPressed: () {
+              print("Button has been pressed");
+            },
+          ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
             backgroundColor: Colors.lightBlueAccent,
+            onPressed: null,
           ),
           backgroundColor: Colors.white,
         ));
