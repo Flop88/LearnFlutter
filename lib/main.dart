@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 void main() => runApp(FlutterTutorialApp());
 
@@ -13,9 +15,7 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Image(
-            image: AssetImage("assets/images/1.jpg"),
-          ),
+          body: SvgPicture.asset("assets/images/3.svg"),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
             backgroundColor: Colors.lightBlueAccent,
