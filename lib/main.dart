@@ -15,19 +15,45 @@ class FlutterTutorialApp extends StatelessWidget {
             backgroundColor: Colors.lightBlueAccent,
           ),
           body: Container(
-            color: Colors.yellow,
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.all(40),
-            transform: Matrix4.rotationZ(0.5),
-            child: IconButton(
-              icon: Icon(
-                Icons.youtube_searched_for_rounded,
+            child: Container(
+              //color: Colors.yellow,
+              child: IconButton(
+                icon: Icon(
+                  Icons.youtube_searched_for_rounded,
+                ),
+                color: Colors.grey[900],
+                iconSize: 100.0,
+                onPressed: () {
+                  print("Button has been pressed");
+                },
               ),
-              color: Colors.grey[900],
-              iconSize: 100.0,
-              onPressed: () {
-                print("Button has been pressed");
-              },
+              decoration: BoxDecoration(
+                color: Colors.yellow,
+                shape: BoxShape.circle,
+                border: Border.all(
+                  width: 5,
+                  color: Colors.red[800],
+                  style: BorderStyle.solid,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black87,
+                    spreadRadius: 5,
+                    blurRadius: 10,
+                    offset: Offset(3, 3),
+                  )
+                ],
+              ),
+            ),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              // gradient: RadialGradient(
+              //   colors: [Colors.red, Colors.black],
+              // ),
+              image: DecorationImage(
+                image: AssetImage("assets/images/1.jpg"),
+                fit: BoxFit.fill,
+              )
             ),
           ),
           floatingActionButton: FloatingActionButton(
