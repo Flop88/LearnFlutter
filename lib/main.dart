@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(FlutterTutorialApp());
 
-
 class FlutterTutorialApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,16 +13,27 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Text(
-            "Hello, World",
-            style: TextStyle(
-                fontSize: 30.0,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
-                letterSpacing: 3.0 ,
-                color: Colors.red,
-                fontFamily: "Notable"
+          body: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                  fontSize: 30.0,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black,
+                  fontFamily: "Notable"),
+              children: <TextSpan>[
+                TextSpan(text: "Hello, "),
+                TextSpan(
+                    style: TextStyle(color: Colors.red),
+                    children: <TextSpan>[
+                      TextSpan(text: "Brave "),
+                      TextSpan(text: "new "),
+                      TextSpan(
+                          text: "World ",
+                          style:
+                              TextStyle(decoration: TextDecoration.underline)),
+                    ]),
+                TextSpan(text: "!"),
+              ],
             ),
           ),
           floatingActionButton: FloatingActionButton(
@@ -34,4 +44,3 @@ class FlutterTutorialApp extends StatelessWidget {
         ));
   }
 }
-
