@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_app/custom_icons.dart';
 
 
 void main() => runApp(FlutterTutorialApp());
@@ -17,7 +17,7 @@ class FlutterTutorialApp extends StatelessWidget {
           ),
           body: IconButton(
             icon:    Icon(
-                Icons.search,
+                CustomIcons.account_circle,
               ),
             color: Colors.grey[900],
             iconSize: 100.0,
