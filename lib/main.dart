@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
+void main() => runApp(FlutterTutorialApp());
+
+
+class FlutterTutorialApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
         title: "Learn Flutter",
         home: Scaffold(
           appBar: AppBar(
-            title: Text("Learn flutter"),
+            title: Text("Learn flutter :)"),
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
@@ -18,7 +22,8 @@ void main() {
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline,
                 letterSpacing: 3.0 ,
-                color: Colors.black87
+                color: Colors.red,
+                fontFamily: "Notable"
             ),
           ),
           floatingActionButton: FloatingActionButton(
@@ -26,6 +31,7 @@ void main() {
             backgroundColor: Colors.lightBlueAccent,
           ),
           backgroundColor: Colors.white,
-        )),
-  );
+        ));
+  }
 }
+
