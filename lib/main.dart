@@ -14,7 +14,11 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Center(
+          body: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 80,
+              vertical: 20,
+            ),
             child: IconButton(
               icon: Icon(
                 CustomIcons.account_circle,
