@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/custom_icons.dart';
 
-
 void main() => runApp(FlutterTutorialApp());
 
 class FlutterTutorialApp extends StatelessWidget {
@@ -15,15 +14,17 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: IconButton(
-            icon:    Icon(
+          body: Center(
+            child: IconButton(
+              icon: Icon(
                 CustomIcons.account_circle,
               ),
-            color: Colors.grey[900],
-            iconSize: 100.0,
-            onPressed: () {
-              print("Button has been pressed");
-            },
+              color: Colors.grey[900],
+              iconSize: 100.0,
+              onPressed: () {
+                print("Button has been pressed");
+              },
+            ),
           ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
