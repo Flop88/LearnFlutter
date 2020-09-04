@@ -13,28 +13,8 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: RichText(
-            text: TextSpan(
-              style: TextStyle(
-                  fontSize: 30.0,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.black,
-                  fontFamily: "Notable"),
-              children: <TextSpan>[
-                TextSpan(text: "Hello, "),
-                TextSpan(
-                    style: TextStyle(color: Colors.red),
-                    children: <TextSpan>[
-                      TextSpan(text: "Brave "),
-                      TextSpan(text: "new "),
-                      TextSpan(
-                          text: "World ",
-                          style:
-                              TextStyle(decoration: TextDecoration.underline)),
-                    ]),
-                TextSpan(text: "!"),
-              ],
-            ),
+          body: Image(
+            image: AssetImage("assets/images/1.jpg"),
           ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
