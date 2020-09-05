@@ -14,37 +14,27 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Container(
-            color: Colors.grey,
-            width: 400,
-            height: 500,
-            child: Stack(
-              alignment: Alignment.bottomRight,
-              overflow: Overflow.visible,
-              fit: StackFit.loose,
-              children: [
-                Container(
-                  color: Colors.blueAccent,
-                  padding: EdgeInsets.all(150),
-                  child: Text("1"),
-                ),
-                Container(
-                  color: Colors.orange,
-                  padding: EdgeInsets.all(100),
-                  child: Text(
-                    "2",
-                  ),
-                ),
-                Positioned(
-                  bottom: -40,
-                  right: -20,
-                  child: Container(
-                    color: Colors.pink,
-                    padding: EdgeInsets.all(50),
-                    child: Text("3"),
-                  ),
-                ),
-              ],
+          body: Center(
+            child: Container(
+              color: Colors.blue,
+              width: 400,
+              height: 400,
+              child: Wrap(
+                direction: Axis.horizontal,
+                spacing: 20,
+                runSpacing: 40,
+                alignment: WrapAlignment.center,
+                runAlignment: WrapAlignment.center,
+                verticalDirection: VerticalDirection.up,
+                textDirection: TextDirection.rtl,
+                children: [
+                  Container( width: 100, height: 100, color: Colors.grey, child: Text("x", style: TextStyle(color: Colors.white),),),
+                  Container( width: 100, height: 100, color: Colors.grey,),
+                  Container( width: 100, height: 100, color: Colors.grey,),
+                  Container( width: 100, height: 100, color: Colors.grey,child: Text("x", style: TextStyle(color: Colors.white),),),
+                  Container( width: 100, height: 100, color: Colors.grey,),
+                ],
+              ),
             ),
           ),
           floatingActionButton: FloatingActionButton(
