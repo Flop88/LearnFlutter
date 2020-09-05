@@ -4,6 +4,18 @@ import 'package:flutter_app/custom_icons.dart';
 void main() => runApp(FlutterTutorialApp());
 
 class FlutterTutorialApp extends StatelessWidget {
+  final List<String> events = [
+    "Event 1",
+    "Event 2",
+    "Event 3",
+    "Event 4",
+    "Event 5",
+    "Event 6",
+    "Event 7",
+    "Event 8",
+    "Event 9",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,28 +26,15 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Center(
-            child: Container(
-              color: Colors.blue,
-              width: 400,
-              height: 400,
-              child: Wrap(
-                direction: Axis.horizontal,
-                spacing: 20,
-                runSpacing: 40,
-                alignment: WrapAlignment.center,
-                runAlignment: WrapAlignment.center,
-                verticalDirection: VerticalDirection.up,
-                textDirection: TextDirection.rtl,
-                children: [
-                  Container( width: 100, height: 100, color: Colors.grey, child: Text("x", style: TextStyle(color: Colors.white),),),
-                  Container( width: 100, height: 100, color: Colors.grey,),
-                  Container( width: 100, height: 100, color: Colors.grey,),
-                  Container( width: 100, height: 100, color: Colors.grey,child: Text("x", style: TextStyle(color: Colors.white),),),
-                  Container( width: 100, height: 100, color: Colors.grey,),
-                ],
-              ),
+          body: ListView.separated(
+            physics: BouncingScrollPhysics(),
+            padding: EdgeInsets.all(40),
+            itemCount: events.length,
+            itemBuilder: (_, index) => Text(
+              events[index],
+              style: TextStyle(fontSize: 80),
             ),
+            separatorBuilder: (_, __) => Divider(color: Colors.red, thickness: 30,),
           ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
