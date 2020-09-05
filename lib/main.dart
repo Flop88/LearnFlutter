@@ -14,38 +14,38 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(
-                child: Container(
-                  color: Colors.blue,
-                  padding: EdgeInsets.all(40),
+          body: Container(
+            color: Colors.grey,
+            width: 400,
+            height: 500,
+            child: Stack(
+              alignment: Alignment.bottomRight,
+              overflow: Overflow.visible,
+              fit: StackFit.loose,
+              children: [
+                Container(
+                  color: Colors.blueAccent,
+                  padding: EdgeInsets.all(150),
                   child: Text("1"),
                 ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
+                Container(
                   color: Colors.orange,
-                  padding: EdgeInsets.all(50),
+                  padding: EdgeInsets.all(100),
                   child: Text(
-                    "222222222222222222222222",
-                    style: TextStyle(
-                      fontSize: 80,
-                    ),
+                    "2",
                   ),
                 ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.pink,
-                  padding: EdgeInsets.all(60),
-                  child: Text("3"),
+                Positioned(
+                  bottom: -40,
+                  right: -20,
+                  child: Container(
+                    color: Colors.pink,
+                    padding: EdgeInsets.all(50),
+                    child: Text("3"),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
