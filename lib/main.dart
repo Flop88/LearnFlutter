@@ -14,47 +14,27 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Container(
-            child: Container(
-              //color: Colors.yellow,
-              child: IconButton(
-                icon: Icon(
-                  Icons.youtube_searched_for_rounded,
-                ),
-                color: Colors.grey[900],
-                iconSize: 100.0,
-                onPressed: () {
-                  print("Button has been pressed");
-                },
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(40),
+                child: Text("1"),
               ),
-              decoration: BoxDecoration(
-                color: Colors.yellow,
-                shape: BoxShape.circle,
-                border: Border.all(
-                  width: 5,
-                  color: Colors.red[800],
-                  style: BorderStyle.solid,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black87,
-                    spreadRadius: 5,
-                    blurRadius: 10,
-                    offset: Offset(3, 3),
-                  )
-                ],
+              Container(
+                color: Colors.orange,
+                padding: EdgeInsets.all(50),
+                child: Text("1"),
               ),
-            ),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              // gradient: RadialGradient(
-              //   colors: [Colors.red, Colors.black],
-              // ),
-              image: DecorationImage(
-                image: AssetImage("assets/images/1.jpg"),
-                fit: BoxFit.fill,
-              )
-            ),
+              Container(
+                color: Colors.pink,
+                padding: EdgeInsets.all(60),
+                child: Text("1"),
+              ),
+            ],
+
           ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
