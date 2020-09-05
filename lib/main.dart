@@ -49,22 +49,24 @@ class FlutterTutorialApp extends StatelessWidget {
               elevation: 10,
               shadowColor: Colors.lightBlueAccent,
               margin: EdgeInsets.symmetric(vertical: 7),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-              child: Column(
-                children: [
-                  Text(
-                    events[index].name,
-                    style: TextStyle(fontSize: 25),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(events[index].location),
-                      SizedBox(width: 10,),
-                      Text(events[index].startDateTime.toString()),
-                    ],
-                  )
-                ],
+              child: ListTile(
+                title: Text(
+                  events[index].name,
+                ),
+                subtitle: Text(
+                    "${events[index].location} ${events[index].startDateTime}"),
+                leading: Icon(
+                  Icons.local_activity,
+                  size: 40,
+                  color: Colors.black,
+                ),
+                trailing: IconButton(
+                  icon: Icon(Icons.edit),
+                  onPressed: null,
+                ),
+                onTap: () => print("${events[index].name} - tap"),
+                onLongPress: () => print("${events[index].name} - long press"),
+                enabled: true,
               ),
             ),
           ),
