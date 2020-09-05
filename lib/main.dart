@@ -14,20 +14,25 @@ class FlutterTutorialApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.lightBlueAccent,
           ),
-          body: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.ideographic,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
                 color: Colors.blue,
                 padding: EdgeInsets.all(40),
                 child: Text("1"),
               ),
+              SizedBox(
+                height: 100,
+              ),
               Container(
                 color: Colors.orange,
                 padding: EdgeInsets.all(50),
                 child: Text("1"),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Container(
                 color: Colors.pink,
@@ -35,7 +40,6 @@ class FlutterTutorialApp extends StatelessWidget {
                 child: Text("1"),
               ),
             ],
-
           ),
           floatingActionButton: FloatingActionButton(
             child: Text("Add"),
