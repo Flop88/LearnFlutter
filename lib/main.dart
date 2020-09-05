@@ -18,26 +18,32 @@ class FlutterTutorialApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                color: Colors.blue,
-                padding: EdgeInsets.all(40),
-                child: Text("1"),
+              Expanded(
+                child: Container(
+                  color: Colors.blue,
+                  padding: EdgeInsets.all(40),
+                  child: Text("1"),
+                ),
               ),
-              SizedBox(
-                height: 100,
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.orange,
+                  padding: EdgeInsets.all(50),
+                  child: Text(
+                    "222222222222222222222222",
+                    style: TextStyle(
+                      fontSize: 80,
+                    ),
+                  ),
+                ),
               ),
-              Container(
-                color: Colors.orange,
-                padding: EdgeInsets.all(50),
-                child: Text("1"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Container(
-                color: Colors.pink,
-                padding: EdgeInsets.all(60),
-                child: Text("1"),
+              Expanded(
+                child: Container(
+                  color: Colors.pink,
+                  padding: EdgeInsets.all(60),
+                  child: Text("3"),
+                ),
               ),
             ],
           ),
